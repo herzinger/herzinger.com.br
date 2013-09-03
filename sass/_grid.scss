@@ -1,0 +1,44 @@
+/************************************************************************************
+	MIXINS
+	U can't touch it.
+	
+************************************************************************************/
+
+/*	This is the mixin for the container.
+ *	I still want to find a way to avoid having to use containers in nested elements, 
+ *	if possible. */
+ 
+@mixin grid(){
+	list-style:none;
+	margin:0;                  
+	padding:0;                 
+	margin-left:-$gutter;
+	letter-spacing:-0.31em;
+	word-spacing:-0.43em;
+}
+
+
+/*	Here is all the shared stuff of the columns.
+ *	We pass the $x just for passing it to the other mixin inside. */
+ 
+@mixin column($x){
+	display:inline-block;
+	padding-left:$gutter;
+	vertical-align:top;
+	letter-spacing:normal;
+	word-spacing:normal;
+	
+	-webkit-box-sizing:	border-box;
+	   -moz-box-sizing:	border-box;
+	        box-sizing:	border-box;
+
+	@include col-width($x);	
+}
+
+
+/*	Here is the mixing that does the trick and calculate the size of the columns.
+ *	It's separated so it won't rewrite everything in the media-queries. */
+
+@mixin col-width($x) {
+	width: $x * 100%;
+}
