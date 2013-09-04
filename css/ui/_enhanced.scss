@@ -1,10 +1,15 @@
-/************************************************************************************
-	MOAR MAGIC
-	Don't worry, those imports have no actual css output,
-	you can call them again with no fear.
+.bar  {
+	.formacao__info { 				@extend %grid__item; }
+	.formacao__andamento { 			@extend %grid__item; }
+}
 
-************************************************************************************/
+/* media object on grid */
+.header__info { 					@extend .grid; }
+.header__info .bd { 				@extend %grid__item; }
+.header__info .avatar { 			@extend %grid__item; }
 
+
+@media only screen and (min-width:46.5em) {
 
 /************************************************************************************
 	STYLE IT YOUR WAY
@@ -17,6 +22,11 @@ body { font: normal 1em/1.5 Raleway, Helvetica-neue, helvetica, arial, sans-seri
 .content { float: right; clear: right; @include widths(3/4) }
 
 .page { 	margin: 0 $gutter/2; padding: $navbar-height*2 $gutter*2 2.25em; }
+
+.chapter {
+	margin-bottom: 1.88em;
+	padding-left: $gutter;
+}
 
 /********** chromeframe ************/
 
@@ -53,7 +63,6 @@ body { font: normal 1em/1.5 Raleway, Helvetica-neue, helvetica, arial, sans-seri
 
 	.formacao__info {
 		@include widths(3/5);
-		@extend %grid__item;
 	}
 
 	.formacao__andamento {
@@ -61,19 +70,17 @@ body { font: normal 1em/1.5 Raleway, Helvetica-neue, helvetica, arial, sans-seri
 		margin: 0;
 		text-align: right;
 		@include widths(2/5);
-		@extend %grid__item;
 	}
 }
 
 
 /* media object on grid */
-.header__info { 			@extend .grid; }
-.header__info .avatar { 	margin-right:0; display: inline-block }
-.header__info .bd { @extend %grid__item; @include widths(3/4); }
-.links, .header__info .avatar {
-	@extend %grid__item;
-	@include widths(1/4);
+.header__info .avatar {
+	margin-right: 0;
+	display: inline-block;
 }
+.header__info .bd { 			@include widths(3/4); }
+.links, .header__info .avatar { @include widths(1/4); }
 
 .avatar img {
 	display: block;
@@ -132,6 +139,7 @@ aside hr { display: none }
 /* Just some sugested breakpoints. You can go anyway you want about it.
  * It's set up for mobile first. */
 
+
 @media only screen and (min-width: 951px) and (max-width: 1160px){
 
 	.columns{
@@ -154,7 +162,7 @@ aside hr { display: none }
 }
 
 
-@media only screen and (max-width: 950px){
+@media only screen and (max-width: 950px) {
 
 	body { font: normal 0.88em/1.3 Raleway, Helvetica-neue, helvetica, arial, sans-serif }
 
@@ -162,8 +170,11 @@ aside hr { display: none }
 	.header__info .bd {		@include widths(10/16); }
 	.links, .content  {		@include widths(1); }
 
-
 	.links { margin-bottom: 1.5em }
+
+	.chapter {
+		padding-left: 0;
+	}
 
 }
 
@@ -180,4 +191,5 @@ aside hr { display: none }
 		}
 	}
 
+}
 }

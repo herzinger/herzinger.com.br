@@ -187,7 +187,7 @@ a {
 
 /********** header ************/
 
-.avatar { display:none; }
+.header .avatar { display:none; }
 
 .header {
 	margin-bottom: 2.25em;
@@ -208,7 +208,6 @@ a {
 
 .chapter {
 	margin-bottom: 1.88em;
-	padding-left: $gutter;
 }
 
 hr, .section {
