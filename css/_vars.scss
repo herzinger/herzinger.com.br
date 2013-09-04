@@ -23,7 +23,7 @@
  * and introducing objects and abstractions is as simple as switching the
  * following variables to `true`.
  */
-$use-avalon:        false;
+$use-avalon:        true;
 $use-grids:         false;
 $use-flexbox:       false;
 $use-columns:       false;
@@ -70,3 +70,64 @@ $use-greybox:       false;
 /**
  * Place any of your own variables that sit on top of holy-grail.css here.
  */
+/************************************************************************************
+	GRID
+	That's all there is to it, really.
+
+************************************************************************************/
+
+/* The gutter is fixed even within nesting, which saves a lot of trouble. */
+
+
+$gutter: 1.88em;
+
+
+/************************************************************************************
+	COLORS
+	All the branding colors of the project goes here.
+	Yep, it still needs lots of work.
+
+************************************************************************************/
+
+$bgcolor: #f9f9f9;
+$brandcolor1: #0bada5;
+$brandcolor2: #bada55;
+$textcolor1: #444;
+$textcolor2: #f9f9f9;
+$highlightcolor: #f43059;
+
+
+$navbar-height: 1.88em;
+
+
+@mixin css-columns ( $count, $width: auto, $gap: $gutter ) {
+
+	-webkit-column-gap:	$gap;
+	   -moz-column-gap:	$gap;
+	        column-gap:	$gap;
+
+	   -webkit-columns:	$width $count;
+	      -moz-columns:	$width $count;
+	    	   columns:	$width $count;
+
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+
+	-webkit-box-shadow:	$top $left $blur $color #{$inset};
+	   -moz-box-shadow:	$top $left $blur $color #{$inset};
+	        box-shadow:	$top $left $blur $color #{$inset};
+
+}
+
+@mixin trasition($property, $duration:0.3s, $function: ease-out){
+
+	-webkit-transition:	$property $duration $function;
+	   -moz-transition:	$property $duration $function;
+	     -o-transition:	$property $duration $function;
+            transition:	$property $duration $function;
+
+}
+
+/*___________________________________________________________________________________
+ *	And that's all, folks. Ready to go.											   */
