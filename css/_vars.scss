@@ -1,0 +1,136 @@
+/*------------------------------------*\
+    VARS.SCSS
+\*------------------------------------*/
+/**
+ * Any variables you find set in holy-grail.css’ `_vars.scss` that you do not wish to
+ * keep, simply redefine here. This means that if holy-grail.css, for example, sets
+ * your `$base-font-size` at 16px and you wish it to be 14px, simply redeclare
+ * that variable in this file. holy-grail.css ignores its own variables in favour of
+ * using your own, so you can completely modify how holy-grail.css works without ever
+ * having to alter the framework itself.
+ */
+
+
+
+
+
+/*------------------------------------*\
+    $OBJECTS-AND-ABSTRACTIONS
+\*------------------------------------*/
+/**
+ * All of holy-grail.css’ objects and abstractions are initially turned off by
+ * default. This means that you start any project with as little as possible,
+ * and introducing objects and abstractions is as simple as switching the
+ * following variables to `true`.
+ */
+$use-avalon:        true;
+$use-grids:         false;
+$use-flexbox:       false;
+$use-columns:       false;
+$use-nav:           false;
+$use-options:       false;
+$use-pagination:    false;
+$use-breadcrumb:    false;
+$use-media:         true;
+$use-marginalia:    false;
+$use-island:        true;
+$use-block-list:    false;
+$use-matrix:        false;
+$use-split:         false;
+$use-this-or-this:  false;
+$use-link-complex:  false;
+$use-flyout:        false;
+$use-arrows:        false;
+$use-sprite:        false;
+$use-icon-text:     false;
+$use-beautons:      false;
+$use-lozenges:      false;
+$use-rules:         false;
+$use-stats:         false;
+$use-greybox:       false;
+
+
+
+
+
+/*------------------------------------*\
+    $OVERRIDES
+\*------------------------------------*/
+/**
+ * Place any variables that should override holy-grail.css’ defaults here.
+ */
+$base-spacing-unit: 30px;
+$h2-size: 24px;
+$h4-size: 16px;
+
+
+
+
+/*------------------------------------*\
+    $CUSTOM
+\*------------------------------------*/
+/**
+ * Place any of your own variables that sit on top of holy-grail.css here.
+ */
+
+
+/************************************************************************************
+	GRID
+	That's all there is to it, really.
+
+************************************************************************************/
+
+/* The gutter is fixed even within nesting, which saves a lot of trouble. */
+$gutter: 30px;
+$base-spacing-unit: $gutter;
+
+
+/************************************************************************************
+	COLORS
+	All the branding colors of the project goes here.
+	Yep, it still needs lots of work.
+
+************************************************************************************/
+
+$bgcolor: #f9f9f9;
+$brandcolor1: #0bada5;
+$brandcolor2: #bada55;
+$textcolor1: #444;
+$textcolor2: #f9f9f9;
+$highlightcolor: #f43059;
+
+
+$navbar-height: 1.88em;
+
+
+@mixin css-columns ( $count, $width: auto, $gap: $gutter ) {
+
+	-webkit-column-gap:	$gap;
+	   -moz-column-gap:	$gap;
+	        column-gap:	$gap;
+
+	   -webkit-columns:	$width $count;
+	      -moz-columns:	$width $count;
+	    	   columns:	$width $count;
+
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+
+	-webkit-box-shadow:	$top $left $blur $color #{$inset};
+	   -moz-box-shadow:	$top $left $blur $color #{$inset};
+	        box-shadow:	$top $left $blur $color #{$inset};
+
+}
+
+@mixin trasition($property, $duration:0.3s, $function: ease-out){
+
+	-webkit-transition:	$property $duration $function;
+	   -moz-transition:	$property $duration $function;
+	     -o-transition:	$property $duration $function;
+            transition:	$property $duration $function;
+
+}
+
+/*___________________________________________________________________________________
+ *	And that's all, folks. Ready to go.											   */
