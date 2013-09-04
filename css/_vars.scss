@@ -31,9 +31,9 @@ $use-nav:           false;
 $use-options:       false;
 $use-pagination:    false;
 $use-breadcrumb:    false;
-$use-media:         false;
+$use-media:         true;
 $use-marginalia:    false;
-$use-island:        false;
+$use-island:        true;
 $use-block-list:    false;
 $use-matrix:        false;
 $use-split:         false;
@@ -59,7 +59,9 @@ $use-greybox:       false;
 /**
  * Place any variables that should override holy-grail.css’ defaults here.
  */
-
+$base-spacing-unit: 30px;
+$h2-size: 24px;
+$h4-size: 16px;
 
 
 
@@ -70,6 +72,8 @@ $use-greybox:       false;
 /**
  * Place any of your own variables that sit on top of holy-grail.css here.
  */
+
+
 /************************************************************************************
 	GRID
 	That's all there is to it, really.
@@ -77,9 +81,8 @@ $use-greybox:       false;
 ************************************************************************************/
 
 /* The gutter is fixed even within nesting, which saves a lot of trouble. */
-
-
-$gutter: 1.88em;
+$gutter: 30px;
+$base-spacing-unit: $gutter;
 
 
 /************************************************************************************

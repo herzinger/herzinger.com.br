@@ -51,27 +51,34 @@ body { font: normal 1em/1.5 Raleway, Helvetica-neue, helvetica, arial, sans-seri
 
 .bar  {
 
-	.info {
+	.formacao__info {
 		@include widths(3/5);
+		@extend %grid__item;
 	}
 
-	.andamento {
+	.formacao__andamento {
 		background: transparent;
-		margin-left: 0;
-		@include widths(2/5);
+		margin: 0;
 		text-align: right;
+		@include widths(2/5);
+		@extend %grid__item;
 	}
 }
 
 
 /* media object on grid */
 .header__info { 			@extend .grid; }
-.header__info .avatar { 	margin-right:0; }
-.header__info .bd { @include widths(3/4); }
+.header__info .avatar { 	margin-right:0; display: inline-block }
+.header__info .bd { @extend %grid__item; @include widths(3/4); }
 .links, .header__info .avatar {
+	@extend %grid__item;
 	@include widths(1/4);
 }
 
+.avatar img {
+	display: block;
+	width: 100%;
+}
 
 .special {
 	ul:hover {
