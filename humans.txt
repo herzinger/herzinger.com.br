@@ -1,0 +1,25 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Henrique Erzinger	Front-End Developer & Designer		@herzinger
+    Bruno Ferreira		Front-End Developer & Designer		@brunofdosreis
+
+# THANKS
+
+	/*	For being the inspiration and/or core developers of parts 
+	 *	of the code and concepts built in this framework.
+	 */
+	
+    HTML5 Boilerplate,		http://html5boilerplate.com/
+	Amber Weinberg,			http://amberweinberg.com/
+	Eric Meyer,				http://meyerweb.com/
+	Harry Roberts.			http://csswizardry.com/
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, jQuery,
+	SASS, Compass, Emmet (Zen Coding),
+	Notepad++, Git and Github.
+	
