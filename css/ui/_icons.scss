@@ -1,0 +1,54 @@
+@font-face {
+	font-family: 'icons';
+	src: url('../fonts/icons.eot?54993977');
+	src: url('../fonts/icons.eot?54993977#iefix') format('embedded-opentype'),
+	url('../fonts/icons.woff?54993977') format('woff'),
+	url('../fonts/icons.ttf?54993977') format('truetype'),
+	url('../fonts/icons.svg?54993977#icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+		font-family: 'icons';
+		src: url('../font/icons.svg?54993977#icons') format('svg');
+	}
+}
+
+
+/* [1] Animation center compensation - margins should be symmetric */
+.icon {
+	font-family: 				"icons";
+	font-style: 				normal;
+	font-weight: 				normal;
+	speak: 						none;
+	display: 					inline-block;
+	text-decoration: 			inherit;
+	width: 						1em;
+	font-variant: 				normal;
+	text-transform: 			none;
+	margin-right: 				.2em;   	/* [1] */
+	margin-left: 				.2em;    	/* [1] */
+}
+
+/*
+check 			= '
+twitter 		= 0
+linkedin 		= /
+facebook 		= -
+github 			= .
+deviantart 		= ,
+behance 		= +
+location 		= $
+road 			= &amp;
+phone-squared 	= %
+beaker 			= )
+mail-alt 		= !
+coffee 			= *
+rocket 			= (
+link-ext-alt 	= #
+link 			= &quot;
+*/
