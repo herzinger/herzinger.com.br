@@ -60,56 +60,26 @@ $use-greybox:       false;
  * Place any variables that should override holy-grail.css’ defaults here.
  */
 
-/*------------------------------------*\
-    $Typography
-\*------------------------------------*/
-// $base-font-size:    	16px;
-$base-line-height:  	24px;
-
-$base-font-family:  	Raleway, Helvetica-neue, helvetica, arial, sans-serif;
-
-/**
- * Default colour for objects’ borders etc.
- */
-$base-ui-color:     	#333;
 $base-spacing-unit: 	30px;
 
+/* Typography */
+// $base-font-size:    	16px;
+$base-line-height:  	24px;
+$base-font-family:  	Raleway, Helvetica-neue, helvetica, arial, sans-serif;
+
+/* Color */
+$base-ui-color:     	#e5e5e5;
+
 
 /*------------------------------------*\
-    $COLORS
+    $CUSTOM
 \*------------------------------------*/
 
-$body_copy: #333;
+/* Color */
+$body_copy: 			#333;
+$hightlight: 			#f43059;
 
-
-@mixin css-columns ( $count, $width: auto, $gap: $gutter ) {
-
-	-webkit-column-gap:	$gap;
-	   -moz-column-gap:	$gap;
-	        column-gap:	$gap;
-
-	   -webkit-columns:	$width $count;
-	      -moz-columns:	$width $count;
-	    	   columns:	$width $count;
-
-}
-
-@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
-
-	-webkit-box-shadow:	$top $left $blur $color #{$inset};
-	   -moz-box-shadow:	$top $left $blur $color #{$inset};
-	        box-shadow:	$top $left $blur $color #{$inset};
-
-}
-
-@mixin trasition($property, $duration:0.3s, $function: ease-out){
-
-	-webkit-transition:	$property $duration $function;
-	   -moz-transition:	$property $duration $function;
-	     -o-transition:	$property $duration $function;
-            transition:	$property $duration $function;
-
-}
 
 /*___________________________________________________________________________________
- *	And that's all, folks. Ready to go.											   */
+ *	And that's all, folks. Ready to go.
+ */
