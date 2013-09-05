@@ -1,54 +1,46 @@
 @font-face {
 	font-family: 'icons';
-	src: url('../fonts/icons.eot?54993977');
-	src: url('../fonts/icons.eot?54993977#iefix') format('embedded-opentype'),
-	url('../fonts/icons.woff?54993977') format('woff'),
-	url('../fonts/icons.ttf?54993977') format('truetype'),
-	url('../fonts/icons.svg?54993977#icons') format('svg');
-	font-weight: normal;
-	font-style: normal;
+		src: 	url('../fonts/icons.eot?54993977');
+		src: 	url('../fonts/icons.eot?54993977#iefix') format('embedded-opentype'),
+				url('../fonts/icons.woff?54993977') format('woff'),
+				url('../fonts/icons.ttf?54993977') format('truetype'),
+				url('../fonts/icons.svg?54993977#icons') format('svg');
+	font-weight: 	normal;
+	font-style: 	normal;
 }
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 	@font-face {
 		font-family: 'icons';
-		src: url('../font/icons.svg?54993977#icons') format('svg');
+		src: 	url('../fonts/icons.svg?54993977#icons') format('svg');
 	}
 }
 
-
-/* [1] Animation center compensation - margins should be symmetric */
-.icon {
+ %icon {
 	font-family: 				"icons";
 	font-style: 				normal;
 	font-weight: 				normal;
+	font-variant: 				normal;
+	text-transform: 			none;
 	speak: 						none;
 	display: 					inline-block;
 	text-decoration: 			inherit;
-	width: 						1em;
-	font-variant: 				normal;
-	text-transform: 			none;
-	margin-right: 				.2em;   	/* [1] */
-	margin-left: 				.2em;    	/* [1] */
+	text-align: 				center;
 }
 
-/*
-check 			= '
-twitter 		= 0
-linkedin 		= /
-facebook 		= -
-github 			= .
-deviantart 		= ,
-behance 		= +
-location 		= $
-road 			= &amp;
-phone-squared 	= %
-beaker 			= )
-mail-alt 		= !
-coffee 			= *
-rocket 			= (
-link-ext-alt 	= #
-link 			= &quot;
-*/
+.icon-check:before { 			content: '\27'; @extend %icon; } /* ' */
+.icon-twitter:before { 			content: '\30'; @extend %icon; } /* 0 */
+.icon-linkedin:before { 		content: '\2f'; @extend %icon; } /* / */
+.icon-facebook:before { 		content: '\2d'; @extend %icon; } /* - */
+.icon-github:before { 			content: '\2e'; @extend %icon; } /* . */
+.icon-deviantart:before { 		content: '\2c'; @extend %icon; } /* , */
+.icon-behance:before { 			content: '\2b'; @extend %icon; } /* + */
+.icon-location:before { 		content: '\24'; @extend %icon; } /* $ */
+.icon-road:before { 			content: '\26'; @extend %icon; } /* &amp; */
+.icon-phone-squared:before {	content: '\25'; @extend %icon; } /* % */
+.icon-beaker:before { 			content: '\29'; @extend %icon; } /* ) */
+.icon-mail-alt:before { 		content: '\21'; @extend %icon; } /* ! */
+.icon-coffee:before { 			content: '\2a'; @extend %icon; } /* * */
+.icon-rocket:before { 			content: '\28'; @extend %icon; } /* ( */
+.icon-link-ext-alt:before { 	content: '\23'; @extend %icon; } /* # */
+.icon-link:before { 			content: '\22'; @extend %icon; } /* &quot; */

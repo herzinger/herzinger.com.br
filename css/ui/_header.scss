@@ -1,0 +1,6 @@
+.social-media__icon {
+	text-decoration: 			none;
+	color: 						$body_copy;
+
+	@include font-size(24px);
+}
