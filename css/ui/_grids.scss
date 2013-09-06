@@ -1,0 +1,2 @@
+.grid__avatar 	{ @extend %grid__item; @include widths(1/4); }
+.grid__info 	{ @extend %grid__item; @include widths(3/4); }

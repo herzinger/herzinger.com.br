@@ -1,11 +1,14 @@
 .social-media__icon {
 	text-decoration: 			none;
-	color: 						$body_copy;
-	margin-right: 				ceil($base-spacing-unit/2);
+	color: 						$body-copy;
 
+	@extend %soft-half--right;
 	@include font-size(24px);
 }
 
 .avatar {
+	margin-right: 				-$half-spacing-unit;
+
 	@include vendor(border-radius, 500px);
+	@extend %float--right;
 }
