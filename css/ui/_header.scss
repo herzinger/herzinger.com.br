@@ -1,14 +1,39 @@
+.main-header {
+	@extend %soft--bottom;
+}
+
+.main-header__info {
+	@extend %soft--ends;
+
+	.highlight {
+		background: 			$highlight;
+		color: 					$white;
+		font-family: 			$brand-face;
+		padding: 				$half-spacing-unit $base-spacing-unit;
+		padding-left: 			$grid-gutter;
+		margin-left: 			-$grid-gutter;
+
+		@include vendor(border-radius, 0 $brand-round $brand-round 0);
+	}
+}
+
+.avatar {
+	margin-right: 				-$half-spacing-unit;
+	position: 					relative;
+	z-index: 					1;
+
+	@include vendor(border-radius, 500px);
+	@extend %float--right;
+}
+
 .social-media__icon {
 	text-decoration: 			none;
 	color: 						$body-copy;
 
 	@extend %soft-half--right;
 	@include font-size(24px);
-}
 
-.avatar {
-	margin-right: 				-$half-spacing-unit;
-
-	@include vendor(border-radius, 500px);
-	@extend %float--right;
+	&:hover {
+		color: 					darken($brand-color, 10%);
+	}
 }

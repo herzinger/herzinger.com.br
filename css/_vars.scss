@@ -59,16 +59,19 @@ $use-greybox:       false;
 /**
  * Place any variables that should override holy-grail.css’ defaults here.
  */
-
-$base-spacing-unit: 	30px;
+// $base-spacing-unit: 	24px;
+$grid-gutter: 			45px;
+$brand-round:			10px;
 
 /* Typography */
 // $base-font-size:    	16px;
 $base-line-height:  	24px;
 $base-font-family:  	Raleway, Helvetica-neue, helvetica, arial, sans-serif;
+$brand-face:			Bitter, Georgia, "Times new roman", serif;
 
 /* Color */
 $base-ui-color:     	#e5e5e5;
+$brand-color:			#4a8ec2;
 
 
 /*------------------------------------*\
@@ -77,7 +80,7 @@ $base-ui-color:     	#e5e5e5;
 
 /* Color */
 $body-copy: 			#444;
-$hightlight: 			#f43059;
+$highlight: 			#f43059;
 $white: 				#f7f7f7;
 
 
